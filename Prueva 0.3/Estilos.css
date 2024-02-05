@@ -1,0 +1,61 @@
+*{
+    margin: 1;
+    padding: 1;
+    box-sizing: border-box;
+}
+.item{
+    background-color: black;
+    width: 200px;
+    height: 200px;
+    margin: 2px;
+    transition: background-color 0.5s, width 0.5s;
+}
+.icon{
+    background-color: rgb(62, 64, 195);
+    animation-name: Move;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-direction: reverse;
+    animation-fill-mode: forwards;
+    animation-delay: 0.25s;
+}
+
+.container:hover .item{
+    background-color: tomato;
+    width: 150px;
+}
+.animacion{
+    background-color: yellow;
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    animation:1.2s Move infinite 5s ;
+
+}
+.animacion:hover{
+    animation-play-state: paused;
+}
+@keyframes Move{
+    fron{
+        transform: translateX(0) ;
+    }
+    to{
+        transform: translateX(100%);
+        background-color: rebeccapurple;
+    }
+
+}
+
+.cosa{
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    clip-path: circle(50% at top left);
+    transition-duration:3s;
+    transition-timing-function:linear;
+}
+.contenedor:hover .cosa{
+    clip-path: circle(150%);
+}
+
+
